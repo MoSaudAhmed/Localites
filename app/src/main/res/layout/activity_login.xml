@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lay_LoginLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundYellow"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".activities.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/lay_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:background="@drawable/login_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/cursiveText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Localites"
+                    android:textColor="@color/backgroundYellow"
+                    android:textSize="40dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/playball_regular"
+                    android:gravity="center"
+                    android:text="Know Whats happening around you"
+                    android:textColor="@color/backgroundYellow"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/backgroundYellow" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputEmail"
+                    style="@style/viewParent"
+                    android:layout_marginTop="60dp"
+                    app:errorEnabled="true">
+
+                    <EditText
+                        android:id="@+id/editTextEmail"
+                        style="@style/modifiedEditText"
+                        android:hint="@string/login_email_hint"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputPassword"
+                    style="@style/viewParent"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    app:errorEnabled="true"
+                    app:passwordToggleEnabled="true">
+
+                    <EditText
+                        android:id="@+id/editTextPassword"
+                        style="@style/modifiedEditText"
+                        android:hint="@string/login_password_hint"
+                        android:inputType="textPassword"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_forgotPassword"
+                    style="@style/viewParent"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="15dp"
+                    android:gravity="right"
+                    android:text="Forgot Password?"
+                    android:textColor="@color/backgroundYellow"
+                    android:textSize="@dimen/forgotPasswordTextSize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_registration"
+                    style="@style/viewParent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="35dp"
+                    android:gravity="left"
+                    android:text="@string/login_signup_hint"
+                    android:textColor="@color/backgroundYellow"
+                    android:textSize="@dimen/forgotPasswordTextSize"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/btn_GoogleSigniIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                app:buttonSize="wide"
+                app:colorScheme="light" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_button"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textSize="@dimen/headerTextSize"
+        android:textStyle="bold"
+        app:layout_anchor="@id/lay_frame"
+        app:layout_anchorGravity="bottom|right" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

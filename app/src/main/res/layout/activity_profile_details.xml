@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lay_profileDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:src="@android:color/white"
+    tools:context=".activities.ProfileDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_layout" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/profileDetails_nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:src="@android:color/white">
+
+                <LinearLayout
+                    android:id="@+id/lay_profileDetails_anchor"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/background_gray"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_gravity="left"
+                            app:cardBackgroundColor="@color/backgroundYellow"
+                            app:cardCornerRadius="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_profileDetails_location"
+                                style="@style/smallText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:drawableLeft="@drawable/ic_my_location_dot"
+                                android:drawablePadding="5dp"
+                                android:gravity="right"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="3dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="3dp"
+                                android:textColor="@android:color/white" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            app:cardBackgroundColor="@color/backgroundYellow"
+                            app:cardCornerRadius="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_profileDetails_followers"
+                                style="@style/smallText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:drawablePadding="5dp"
+                                android:gravity="right"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="3dp"
+                                android:paddingRight="8dp"
+                                android:paddingBottom="3dp"
+                                android:text="0 followers"
+                                android:textColor="@android:color/white" />
+                        </androidx.cardview.widget.CardView>
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_profileDetails_email"
+                        style="@style/normalText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@color/background_gray" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/normalText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Personal Details" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            style="@style/smallText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="start"
+                            android:text="Name: "
+                            android:textAlignment="textStart" />
+
+                        <TextView
+                            android:id="@+id/et_profileDetails_name"
+                            style="@style/smallTextlite"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1.5"
+                            android:gravity="start"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textAlignment="textStart" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            style="@style/smallText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="start"
+                            android:text="Gender: "
+                            android:textAlignment="textStart"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/et_profileDetails_gender"
+                            style="@style/smallTextlite"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1.5"
+                            android:gravity="start"
+                            android:text="male"
+                            android:textAlignment="textStart" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            style="@style/smallText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="start"
+                            android:text="Mobile: "
+                            android:textAlignment="textStart" />
+
+                        <TextView
+                            android:id="@+id/tv_profileDetails_mobile"
+                            style="@style/smallTextlite"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1.5"
+                            android:gravity="start"
+                            android:inputType="phone"
+                            android:singleLine="true"
+                            android:text="mobile"
+                            android:textAlignment="textStart" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            style="@style/smallText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="start"
+                            android:text="About me: "
+                            android:textAlignment="textStart" />
+
+                        <TextView
+                            android:id="@+id/et_profileDetails_yourSelf"
+                            style="@style/smallTextlite"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1.5"
+                            android:gravity="start"
+                            android:text="Tell us a little something about yourself"
+                            android:textAlignment="textStart" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            style="@style/smallText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="start"
+                            android:text="Occupation: "
+                            android:textAlignment="textStart" />
+
+                        <TextView
+                            android:id="@+id/tv_profileDetails_Occupation"
+                            style="@style/smallTextlite"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1.5"
+                            android:gravity="start"
+                            android:singleLine="true"
+                            android:text="Occupation"
+                            android:textAlignment="textStart" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            style="@style/smallText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="start"
+                            android:text="Website: "
+                            android:textAlignment="textStart" />
+
+                        <TextView
+                            android:id="@+id/tv_profileDetails_Website"
+                            style="@style/smallTextlite"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1.5"
+                            android:gravity="start"
+                            android:text="Website"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/holo_blue_dark" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/background_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/smallText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="start"
+                        android:text="Linked Accounts"
+                        android:textAlignment="textStart" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/smallText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Facebook: " />
+
+                        <TextView
+                            android:id="@+id/et_profileDetails_Facebook"
+                            style="@style/smallTextlite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:inputType="textWebEditText"
+                            android:singleLine="true"
+                            android:text="https://www.facebook.com/"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/holo_blue_dark" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/smallText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Instagram: "></TextView>
+
+                        <TextView
+                            android:id="@+id/et_profileDetails_Instagram"
+                            style="@style/smallTextlite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:inputType="textWebEditText"
+                            android:singleLine="true"
+                            android:text="https://www.instagram.com/"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/holo_blue_dark" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/smallText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Youtube: "></TextView>
+
+                        <TextView
+                            android:id="@+id/et_profileDetails_Youtube"
+                            style="@style/smallTextlite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:inputType="textWebEditText"
+                            android:singleLine="true"
+                            android:text="https://www.youtube.com/"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/holo_blue_dark" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_anchor="@id/lay_profileDetails_anchor"
+        app:layout_anchorGravity="bottom">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_ProfileDetails_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            app:cardBackgroundColor="@color/backgroundYellow"
+            app:cardCornerRadius="15dp">
+
+            <TextView
+                style="@style/smallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp"
+                android:text="Report"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/lay_profileDetails_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profileDetailsPic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_person_outerline_yellow"
+                app:civ_border_color="@color/backgroundYellow"
+                app:civ_border_width="2dp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_ProfileDetails_message"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_inbox_yellowoutline" />
+
+        <ImageView
+            android:id="@+id/img_ProfileDetails_follow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_unfollow" />
+
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

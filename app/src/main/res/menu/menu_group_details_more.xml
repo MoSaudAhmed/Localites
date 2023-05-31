@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_groupDetails_more_contact_edit"
+        android:title="Contact Owner"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_groupDetails_delete_unfollow"
+        android:title="unfollow"
+        app:showAsAction="never" />
+</menu>

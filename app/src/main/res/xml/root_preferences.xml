@@ -1,0 +1,114 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/privacy_header">
+
+        //Who can message me
+        <ListPreference
+            android:icon="@drawable/ic_message"
+            android:persistent="false"
+            app:defaultValue="Everyone"
+            app:entries="@array/privacy_message"
+            app:entryValues="@array/priacy_message_values"
+            app:key="@string/privacy_message_key"
+            app:title="@string/privacy_message_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:icon="@drawable/ic_phone"
+            android:persistent="false"
+            app:defaultValue="Everyone"
+            app:entries="@array/privacy_mobile"
+            app:entryValues="@array/openType_values"
+            app:key="@string/privacy_mobile_key"
+            app:title="@string/privacy_mobile_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:icon="@drawable/ic_inbox_yellow"
+            android:persistent="false"
+            app:defaultValue="Everyone"
+            app:entries="@array/privacy_mobile"
+            app:entryValues="@array/openType_values"
+            app:key="@string/privacy_email_key"
+            app:title="@string/privacy_email_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            android:icon="@drawable/ic_group"
+            android:persistent="false"
+            app:defaultValue="true"
+            app:key="@string/show_my_followers_key"
+            app:summaryOff="@string/show_my_followers_summaryoff"
+            app:summaryOn="@string/show_my_followers_summaryon"
+            app:title="@string/show_my_followers_title" />
+
+        <SwitchPreferenceCompat
+            android:icon="@drawable/ic_follow"
+            android:persistent="false"
+            app:defaultValue="true"
+            app:key="@string/others_can_follow_key"
+            app:summaryOff="@string/others_can_follow_summaryoff"
+            app:summaryOn="@string/others_can_follow_summaryon"
+            app:title="@string/others_can_follow_title" />
+
+        <EditTextPreference
+            android:persistent="false"
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:persistent="false"
+            app:defaultValue="reply"
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:key="reply"
+            app:title="@string/reply_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header">
+
+        <SwitchPreferenceCompat
+            app:key="sync"
+            app:title="@string/sync_title" />
+
+        <SwitchPreferenceCompat
+            app:dependency="sync"
+            app:key="attachment"
+            app:summaryOff="@string/attachment_summary_off"
+            app:summaryOn="@string/attachment_summary_on"
+            app:title="@string/attachment_title" />
+
+        <SeekBarPreference
+            android:max="100"
+            app:key="Seekbar"
+            app:min="0"
+            app:showSeekBarValue="true"
+            app:title="Seekbar Title" />
+        <DropDownPreference
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:key="DropDown"
+            app:title="DropDown Title"
+            app:useSimpleSummaryProvider="true" />
+
+        <MultiSelectListPreference
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:key="MultipleSelectList"
+            app:title="MultipleSelectList Title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Delete My Account">
+
+        <Preference
+            app:key="@string/delete_account"
+            app:layout="@layout/delete_account_item" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Localites</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+    <string name="terms_conditions">I agree with terms and conditions</string>
+    <string name="allow_premission_to_store_data">Please allow internal/external storage permission to access your images</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="privacy_header">Privacy</string>
+
+    <string name="privacy_mobile_key">Mobile Privacy</string>
+    <string name="privacy_mobile_title">My mobile number can be seen by</string>
+
+    <string name="privacy_email_key">Email Privacy</string>
+    <string name="privacy_email_title">My Email Address can be seen by</string>
+
+    <string name="privacy_message_key">Message Privacy</string>
+    <string name="privacy_message_title">Who can message me</string>
+
+    <string name="show_my_followers_key">Show Followers</string>
+    <string name="show_my_followers_title">Show my followers</string>
+    <string name="show_my_followers_summaryon">Your followers count will be shown to Other users</string>
+    <string name="show_my_followers_summaryoff">Your followers count will not be Visible to Other users</string>
+
+    <string name="others_can_follow_key">Others Follow</string>
+    <string name="others_can_follow_title">Follow Me</string>
+    <string name="others_can_follow_summaryon">Now, Other users can follow you, Keep it Turned on to increase your fan base</string>
+    <string name="others_can_follow_summaryoff">Other users can not follow you. Turn it on to increase your fan base</string>
+
+    <string name="delete_account">Delete Account</string>
+
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string name="places_key">AIzaSyA_ErPfYE7TmZAGl6yuOTk-TibcONGL4Cw</string>
+
+</resources>

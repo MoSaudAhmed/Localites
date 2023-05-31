@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:elevation="10dp"
+    android:orientation="horizontal"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_groupItem_coverPic"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_market" />
+
+        <TextView
+            android:id="@+id/tv_groupItem_shortName"
+            style="@style/headerText"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundYellow"
+            android:gravity="center"
+            android:text="TH"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/tv_groupItem_title"
+                style="@style/normalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="This is the Group Title"
+                android:textAlignment="textStart" />
+
+
+            <TextView
+                android:id="@+id/tv_groupItem_description"
+                style="@style/smallTextlite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="This is the Group description and it could be two lines one after one"
+                android:textAlignment="textStart" />
+
+            <TextView
+                android:id="@+id/tv_groupItem_location"
+                style="@style/smallTextlite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="India, Hyderabad"
+                android:textAlignment="textEnd" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

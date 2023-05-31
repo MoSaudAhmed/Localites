@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_groupSearch"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_groupLocation"
+        android:icon="@drawable/ic_my_location_dot_white"
+        android:title="Country Search"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_groupReset"
+        android:title="Reset"
+        app:showAsAction="never" />
+</menu>

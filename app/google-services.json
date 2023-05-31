@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "621433220395",
+    "firebase_url": "https://localites-c604a.firebaseio.com",
+    "project_id": "localites-c604a",
+    "storage_bucket": "localites-c604a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621433220395:android:27a4bcc7c73c672e93e96e",
+        "android_client_info": {
+          "package_name": "com.example.localites"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621433220395-v0231mplo5uiu42s51437k8ljrgrcro3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.localites",
+            "certificate_hash": "4bce75a8f86929630a5c1225ecd80083652fa272"
+          }
+        },
+        {
+          "client_id": "621433220395-0kdbbmub467v4ligol0gibk39lgt9ah3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_ErPfYE7TmZAGl6yuOTk-TibcONGL4Cw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621433220395-0kdbbmub467v4ligol0gibk39lgt9ah3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
